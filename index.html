@@ -1,173 +1,43 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111111">
-  <title>گروه‌های طلای مهدی</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Tahoma, Arial, sans-serif;
-      background: linear-gradient(145deg, #171717, #292929);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-    }
-    .card {
-      width: 100%;
-      max-width: 430px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.13);
-      border-radius: 28px;
-      padding: 30px 22px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,.35);
-      backdrop-filter: blur(12px);
-    }
-    .logo {
-      width: 82px;
-      height: 82px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #d4af37, #f7df86);
-      color: #171717;
-      font-size: 38px;
-      box-shadow: 0 8px 30px rgba(212,175,55,.25);
-    }
-    h1 { margin: 0 0 8px; font-size: 25px; }
-    .subtitle {
-      margin: 0 0 25px;
-      color: #d6d6d6;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-    .btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: #fff;
-      padding: 16px;
-      margin: 12px 0;
-      border-radius: 17px;
-      background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.12);
-      transition: transform .2s, background .2s;
-    }
-    .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,.15); }
-    .icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-    .wa { background: #25D366; }
-    .eitaa { background: #159bd7; }
-    .rubika { background: #8e44ad; }
-    .text { text-align: right; flex: 1; }
-    .text strong { display: block; font-size: 16px; margin-bottom: 4px; }
-    .text span { color: #cfcfcf; font-size: 12px; }
-    .arrow { font-size: 20px; color: #d4af37; }
-    .qr-box {
-      margin: 24px auto 4px;
-      padding: 16px;
-      width: fit-content;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 12px 35px rgba(0,0,0,.25);
-    }
-    #qrcode { width: 180px; height: 180px; }
-    #qrcode img, #qrcode canvas { display: block; margin: auto; }
-    .qr-title { margin: 10px 0 4px; font-size: 14px; font-weight: bold; color: #f7df86; }
-    .qr-hint { margin: 0 0 14px; color: #aaa; font-size: 11px; line-height: 1.7; }
-    .actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-    .action {
-      border: 1px solid rgba(212,175,55,.35);
-      background: rgba(212,175,55,.12);
-      color: #f7df86;
-      padding: 9px 13px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 12px;
-    }
-    .action:hover { background: rgba(212,175,55,.2); }
-    footer { margin-top: 22px; font-size: 11px; color: #aaa; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#087ac1">
+<meta name="description" content="صفحه رسمی گروه‌های طلای مهدی">
+<title>طلای مهدی | گروه‌های رسمی</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;font-family:Tahoma,"Segoe UI",Arial,sans-serif;background:linear-gradient(145deg,#d9f1ff 0%,#fff 25%,#eef9ff 55%,#c8edff 100%);color:#172d50;display:flex;justify-content:center;align-items:center;padding:15px;overflow-x:hidden}.page{width:100%;max-width:980px;min-height:calc(100vh - 30px);position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(248,253,255,.98) 48%,rgba(225,245,255,.98));border:2px solid rgba(207,164,52,.55);border-radius:42px;box-shadow:0 20px 60px rgba(0,93,145,.22),inset 0 0 60px rgba(255,255,255,.9);padding:50px 30px 120px}.page::before{content:"";position:absolute;width:900px;height:900px;top:-480px;left:-260px;border:2px solid rgba(211,171,75,.4);border-radius:50%;transform:rotate(-18deg);pointer-events:none}.page::after{content:"";position:absolute;width:800px;height:800px;right:-300px;bottom:-500px;border:3px solid rgba(209,164,49,.45);border-radius:50%;box-shadow:0 0 0 18px rgba(255,255,255,.35),0 0 0 45px rgba(22,147,213,.12);pointer-events:none}.light{position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px)}.light.one{width:180px;height:180px;top:70px;left:70px;background:radial-gradient(circle,rgba(255,255,255,.9),rgba(255,255,255,0))}.light.two{width:250px;height:250px;right:30px;bottom:180px;background:radial-gradient(circle,rgba(255,255,255,.8),rgba(255,255,255,0))}.content{position:relative;z-index:5;width:100%;max-width:650px;margin:auto;text-align:center}.logo-area{display:flex;justify-content:center;align-items:center;margin-top:25px;margin-bottom:10px}.logo{width:145px;height:145px;position:relative;border-radius:50%;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at 35% 25%,#39a9ee,#0874be 65%,#064e88);border:7px solid #dfad30;box-shadow:0 0 0 4px #f9df8b,0 12px 28px rgba(0,91,153,.32)}.crown{position:absolute;top:-62px;left:50%;transform:translateX(-50%);font-size:58px;line-height:1;color:#e7b635;text-shadow:0 2px 2px #9d6c0e,0 5px 10px rgba(170,120,20,.3)}.logo-m{font-family:Arial,sans-serif;font-size:70px;font-weight:900;color:#f7d66e;letter-spacing:-10px;transform:translateX(-4px);text-shadow:1px 2px 0 #fff2b2,3px 5px 6px rgba(0,0,0,.2)}.title{margin-top:15px;font-size:42px;font-weight:900;color:#0878c0;text-shadow:1px 2px 0 #fff,0 4px 9px rgba(0,75,130,.2)}.english{margin-top:3px;font-family:Arial,sans-serif;font-size:20px;font-weight:bold;letter-spacing:8px;color:#d29c25}.separator{width:220px;height:2px;margin:13px auto 20px;position:relative;background:linear-gradient(90deg,transparent,#d6a735,transparent)}.separator::before,.separator::after{content:"◆";position:absolute;top:-8px;color:#d6a735;font-size:10px}.separator::before{left:25px}.separator::after{right:25px}.description{margin-bottom:18px;font-size:17px;line-height:2;color:#29343f}.buttons{width:100%}.btn{width:100%;min-height:94px;margin:13px 0;padding:10px 20px;display:flex;align-items:center;text-decoration:none;color:#172d50;background:linear-gradient(110deg,#fff,#fff 70%,#f8fbfd);border:2px solid #e3ba4b;border-radius:22px;box-shadow:0 6px 16px rgba(35,108,145,.15),inset 0 0 10px rgba(255,255,255,.8);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.btn:hover{transform:translateY(-3px);box-shadow:0 11px 25px rgba(35,108,145,.22)}.btn:active{transform:scale(.98)}.icon{width:66px;height:66px;flex-shrink:0;border-radius:17px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Arial,sans-serif;font-size:33px;font-weight:bold;box-shadow:0 5px 12px rgba(0,0,0,.15)}.wa{background:#20c765}.eitaa{background:linear-gradient(135deg,#22a8e8,#087cc7)}.rubika{background:linear-gradient(135deg,#7028ae,#a94bd0)}.btn-text{flex:1;text-align:center;padding:0 15px}.btn-text strong{display:block;margin-bottom:5px;font-size:20px;font-weight:900;color:#173259}.btn-text span{display:block;font-size:13px;color:#555}.arrow{width:30px;font-family:Arial,sans-serif;font-size:43px;color:#dfad38}.qr-section{margin-top:28px;text-align:center}.qr-title{font-size:21px;font-weight:900;color:#0876bf}.qr-title span{color:#d19c24}.qr-description{margin-top:4px;margin-bottom:13px;font-size:13px;color:#555}.qr-box{width:220px;height:220px;margin:auto;padding:13px;display:flex;justify-content:center;align-items:center;background:#fff;border:2px solid #dfb342;border-radius:25px;box-shadow:0 8px 22px rgba(31,108,145,.18)}#qrcode{width:190px;height:190px;display:flex;justify-content:center;align-items:center}#qrcode img,#qrcode canvas{max-width:190px!important;max-height:190px!important}.qr-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}.qr-action{border:1px solid #d5a634;background:#fff8e4;color:#9a6a08;padding:9px 14px;border-radius:12px;cursor:pointer;font-family:inherit;font-size:12px}.qr-action:hover{background:#fff0c7}.footer-bar{position:absolute;z-index:8;left:50%;bottom:17px;transform:translateX(-50%);width:92%;max-width:850px;min-height:68px;padding:8px 18px;display:flex;align-items:center;justify-content:space-around;border:2px solid #f0c54a;border-radius:40px;background:linear-gradient(180deg,#1393d9,#076bb5);box-shadow:0 6px 16px rgba(0,90,155,.25);color:#fff}.footer-item{flex:1;min-height:40px;display:flex;justify-content:center;align-items:center;gap:9px;padding:0 10px;font-size:13px;font-weight:bold;border-left:1px solid rgba(255,255,255,.45)}.footer-item:last-child{border-left:none}.footer-icon{width:40px;height:40px;display:flex;justify-content:center;align-items:center;color:#f8d15c;font-size:25px}@media(max-width:600px){body{padding:7px}.page{min-height:calc(100vh - 14px);border-radius:28px;padding:55px 12px 110px}.logo{width:105px;height:105px;border-width:5px}.crown{top:-44px;font-size:42px}.logo-m{font-size:50px}.title{font-size:31px}.english{font-size:13px;letter-spacing:5px}.description{font-size:13px;margin-bottom:14px}.btn{min-height:80px;padding:8px 11px;border-radius:18px}.icon{width:53px;height:53px;font-size:27px;border-radius:14px}.btn-text{padding:0 6px}.btn-text strong{font-size:15px}.btn-text span{font-size:10px}.arrow{width:22px;font-size:34px}.qr-title{font-size:17px}.qr-description{font-size:10px}.qr-box{width:180px;height:180px;padding:10px;border-radius:20px}#qrcode{width:155px;height:155px}#qrcode img,#qrcode canvas{max-width:155px!important;max-height:155px!important}.qr-action{font-size:10px;padding:8px 10px}.footer-bar{width:94%;min-height:58px;bottom:8px;padding:4px 2px}.footer-item{gap:3px;padding:0 2px;font-size:8px}.footer-icon{width:26px;height:26px;font-size:17px}}@media(max-width:380px){.page{padding-left:8px;padding-right:8px}.btn-text strong{font-size:13px}.btn-text span{font-size:9px}.footer-item{font-size:7px}}
+</style>
 </head>
 <body>
-  <main class="card">
-    <div class="logo">Au</div>
-    <h1>طلای مهدی</h1>
-    <p class="subtitle">برای ورود به گروه موردنظر، یکی از گزینه‌های زیر را انتخاب کنید.</p>
-
-    <a class="btn" href="https://chat.whatsapp.com/CMHc1gAXA681SvLr8CCmhJ" target="_blank" rel="noopener">
-      <div class="icon wa">◉</div>
-      <div class="text"><strong>گروه واتساپ طلای مهدی</strong><span>ورود به گروه واتساپ</span></div>
-      <div class="arrow">‹</div>
-    </a>
-
-    <a class="btn" href="https://eitaa.com/mahdi_gold_gallery1" target="_blank" rel="noopener">
-      <div class="icon eitaa">✈</div>
-      <div class="text"><strong>گروه ایتا طلای مهدی</strong><span>ورود به گروه ایتا</span></div>
-      <div class="arrow">‹</div>
-    </a>
-
-    <a class="btn" href="https://rubika.ir/mahdi_gold_gallery1" target="_blank" rel="noopener">
-      <div class="icon rubika">R</div>
-      <div class="text"><strong>گروه روبیکا طلای مهدی</strong><span>ورود به گروه روبیکا</span></div>
-      <div class="arrow">‹</div>
-    </a>
-
-    <div class="qr-title">QR Code صفحه طلای مهدی</div>
-    <p class="qr-hint">با اسکن این کد، همین صفحه روی گوشی باز می‌شود.</p>
-    <div class="qr-box"><div id="qrcode"></div></div>
-    <div class="actions">
-      <button class="action" onclick="sharePage()">اشتراک‌گذاری صفحه</button>
-      <button class="action" onclick="copyLink()">کپی لینک صفحه</button>
-    </div>
-
-    <footer>طلای مهدی • شبکه‌های اجتماعی</footer>
-  </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script>
-    const pageUrl = window.location.href;
-    new QRCode(document.getElementById('qrcode'), {
-      text: pageUrl,
-      width: 180,
-      height: 180,
-      colorDark: '#111111',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H
-    });
-
-    async function copyLink() {
-      try {
-        await navigator.clipboard.writeText(pageUrl);
-        alert('لینک صفحه کپی شد.');
-      } catch (e) {
-        alert(pageUrl);
-      }
-    }
-
-    async function sharePage() {
-      if (navigator.share) {
-        await navigator.share({ title: 'طلای مهدی', text: 'گروه‌های طلای مهدی', url: pageUrl });
-      } else {
-        copyLink();
-      }
-    }
-  </script>
+<div class="page">
+<div class="light one"></div><div class="light two"></div>
+<main class="content">
+<div class="logo-area"><div class="logo"><div class="crown">♛</div><div class="logo-m">M</div></div></div>
+<h1 class="title">طلای مهدی</h1><div class="english">MAHDI GOLD</div><div class="separator"></div>
+<p class="description">برای ورود به گروه موردنظر، یکی از گزینه‌های زیر را انتخاب کنید.</p>
+<section class="buttons">
+<a class="btn" href="https://chat.whatsapp.com/CMHc1gAXA681SvLr8CCmhJ" target="_blank" rel="noopener noreferrer"><div class="icon wa">☎</div><div class="btn-text"><strong>گروه واتساپ طلای مهدی</strong><span>ورود به گروه واتساپ</span></div><div class="arrow">‹</div></a>
+<a class="btn" href="https://eitaa.com/mahdi_gold_gallery1" target="_blank" rel="noopener noreferrer"><div class="icon eitaa">e</div><div class="btn-text"><strong>گروه ایتا طلای مهدی</strong><span>ورود به گروه ایتا</span></div><div class="arrow">‹</div></a>
+<a class="btn" href="https://rubika.ir/mahdi_gold_gallery1" target="_blank" rel="noopener noreferrer"><div class="icon rubika">R</div><div class="btn-text"><strong>گروه روبیکا طلای مهدی</strong><span>ورود به گروه روبیکا</span></div><div class="arrow">‹</div></a>
+</section>
+<section class="qr-section">
+<div class="qr-title">صفحه <span>QR Code</span> طلای مهدی</div>
+<div class="qr-description">با اسکن این کد، همین صفحه روی گوشی شما باز می‌شود.</div>
+<div class="qr-box"><div id="qrcode"></div></div>
+<div class="qr-actions"><button class="qr-action" onclick="downloadQR()">دانلود QR</button><button class="qr-action" onclick="copyLink()">کپی لینک</button><button class="qr-action" onclick="sharePage()">اشتراک‌گذاری</button></div>
+</section>
+</main>
+<footer class="footer-bar"><div class="footer-item"><div class="footer-icon">🛡</div><span>امنیت بالا</span></div><div class="footer-item"><div class="footer-icon">★</div><span>ضمانت اصالت</span></div><div class="footer-item"><div class="footer-icon">◇</div><span>طلای ۱۸ عیار</span></div><div class="footer-item"><div class="footer-icon">☎</div><span>پشتیبانی ۲۴/۷</span></div></footer>
+</div>
+<script>
+const pageURL="https://paria2323.github.io/mahdi-gold-groups/";
+const qr=new QRCode(document.getElementById("qrcode"),{text:pageURL,width:190,height:190,colorDark:"#111111",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
+function downloadQR(){const img=document.querySelector("#qrcode img");if(img){const a=document.createElement("a");a.href=img.src;a.download="mahdi-gold-qr.png";a.click()}else{const canvas=document.querySelector("#qrcode canvas");if(canvas){const a=document.createElement("a");a.href=canvas.toDataURL("image/png");a.download="mahdi-gold-qr.png";a.click()}}}
+async function copyLink(){try{await navigator.clipboard.writeText(pageURL);alert("لینک صفحه کپی شد.")}catch(e){alert(pageURL)}}
+async function sharePage(){if(navigator.share){await navigator.share({title:"طلای مهدی",text:"صفحه رسمی گروه‌های طلای مهدی",url:pageURL})}else{copyLink()}}
+</script>
 </body>
 </html>
